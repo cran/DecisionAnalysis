@@ -1,4 +1,4 @@
-611b3102581e5cdf20f7fe4abefe0972 *DESCRIPTION
+2a1c143b6f357356e877379e50da6c48 *DESCRIPTION
 16d89cb00fc8c84535966c7fa61a8f8d *NAMESPACE
 b162a303a6e47a92b007546050ac4c6c *R/DecisionAnalysis_package.R
 e6e5cd4c43a13a90dc2fc26af7bf4289 *R/MAVF_breakout.R
@@ -14,11 +14,11 @@ a6a39357e43c75413880baa04a94d87b *R/SAVF_linear_score.R
 de0c8c7d3e578abdefe591f38ee9e0ef *R/onattach.R
 3b6d2d7f6f8cd7ca691aa933dd906d3c *R/sensitivity_plot.R
 411a28e8f95ef5174c4b4cf86573d828 *R/value_hierarchy_tree.R
-12ded65e18fdcf16af4db5e268c84ce5 *build/vignette.rds
+f4bf64f0741b932fb970504fbcc5b7bc *build/vignette.rds
 7f43e86787001769b91bb1562fb82126 *data/NFLcombine.rda
 226e66d78783416cbaa36501bc0df253 *inst/doc/MultiObjectiveDecisionAnalysisinR.R
 819039a29627df7848281fffb127751a *inst/doc/MultiObjectiveDecisionAnalysisinR.Rmd
-d1db3c0850f6c13c5609acc57b51181a *inst/doc/MultiObjectiveDecisionAnalysisinR.html
+d19d3efa5823ddc41ddfbd01b6841748 *inst/doc/MultiObjectiveDecisionAnalysisinR.html
 aad046ce7be45f3cef28a7700bf9ef35 *man/DecisionAnalysis-package.Rd
 7b3693291a618a47eafbed5b64c2b4ef *man/MAVF_Scores.Rd
 f128892e3bc7f85cb1bc27dfe8611e03 *man/MAVF_breakout.Rd
