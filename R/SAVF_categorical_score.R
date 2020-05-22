@@ -32,8 +32,9 @@ SAVF_categorical_score <- function(x, categories, weights){
   x <- data.frame(x)
   names(x) <- c("categories")
   df <- data.frame(categories, weights)
-  combined <- sort(union(levels(x$categories), levels(df$categories)))
-  value <- dplyr::left_join(dplyr::mutate(x, categories=factor(categories, levels=combined)),
-                            dplyr::mutate(df, categories=factor(categories, levels=combined)),by="categories")
+  #combined <- sort(union(levels(x$categories), levels(df$categories)))
+  #value <- dplyr::left_join(dplyr::mutate(x, categories=factor(categories, levels=combined)),
+  #                          dplyr::mutate(df, categories=factor(categories, levels=combined)),by="categories")
+  value <- left_join(x,df, by = "categories")
   return(value[,2])
 }

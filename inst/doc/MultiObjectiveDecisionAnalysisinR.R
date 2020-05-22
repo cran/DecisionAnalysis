@@ -1,4 +1,4 @@
-## ----warning=FALSE, message=FALSE----------------------------------------
+## ----warning=FALSE, message=FALSE---------------------------------------------
 knitr::opts_chunk$set(collapse = TRUE, 
                       fig.align = "center",
                       options(bitmapType='cairo'))
@@ -7,7 +7,7 @@ library(gridExtra)
 library(knitr)
 library(Cairo)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 qbdata <- DecisionAnalysis::NFLcombine %>%
     filter(year == '2011', position == 'QB', wonderlic != '0') %>%
   select(c(2, 8, 9, 12, 15, 17, 18, 25, 20))  
@@ -15,7 +15,7 @@ qbdata[qbdata == 0] = NA
 names(qbdata) <- c("Name", "Height", "Weight", "Forty", 
                      "Shuttle", "Vertical", "Broad", "Wonderlic", "Round")
 
-## ----echo=FALSE----------------------------------------------------------
+## ----echo=FALSE---------------------------------------------------------------
 knitr::kable(qbdata, caption = "Data")
 
 ## ----fig.cap="Value Hierarchy", fig.align='center', fig.width=7, fig.height=4----
@@ -39,7 +39,7 @@ a2 <- DecisionAnalysis::SAVF_linear_plot(10, 0, 20, 100, FALSE)
 a3 <- DecisionAnalysis::SAVF_cat_plot(c("Tom", "Bill", "Jerry"), c(0.1, 0.25, 0.65))
 gridExtra::grid.arrange(a1, a2, a3, ncol = 2)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 Height <- round(DecisionAnalysis::SAVF_exp_score(qbdata$Height , 68, 75.21, 82), 3)
 Weight <- round(DecisionAnalysis::SAVF_exp_score(qbdata$Weight, 185, 224.34, 275), 3)
 Forty <- round(DecisionAnalysis::SAVF_exp_score(qbdata$Forty, 4.3, 4.81, 5.4, FALSE), 3)
@@ -68,7 +68,7 @@ branches[7,]<-rbind("QB","Strength","Power","Broad","0.228")
 DecisionAnalysis::value_hierarchy_tree(branches$Level1,branches$Level2,branches$Level3,
 leaves=branches$leaves,weights=branches$weights, nodefillcolor = "LightBlue", leavesfillcolor = "Blue", leavesfontcolor = "White")
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 Height <- round(DecisionAnalysis::SAVF_exp_score(qbdata$Height , 68, 75.21, 82), 3)
 Weight <- round(DecisionAnalysis::SAVF_exp_score(qbdata$Weight, 185, 224.34, 275), 3)
 Forty <- round(DecisionAnalysis::SAVF_exp_score(qbdata$Forty, 4.3, 4.81, 5.4, FALSE), 3)
